@@ -1,0 +1,14 @@
+server:
+  port: 9000
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: gabbal
+    password: gabbal
+
+keycloak:
+  realm: brinks
+  auth-server-url: http://${KEYCLOAK_HOST:localhost}:${KEYCLOAK_PORT:9090}/auth
+  resource: brinks-pay-server
+  bearer-only: true
